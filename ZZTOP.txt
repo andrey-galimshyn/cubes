@@ -1,0 +1,6 @@
+распахнуть
+free cubes candidates quantity : 0
+free cubes quantity : 1
+current word index : 2
+starting word index : 7
+letter candidate : т
