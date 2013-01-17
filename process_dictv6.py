@@ -13,36 +13,35 @@ def main():
     print 'Dict talk'
 
     '''
-    cb1 = Cube(1, {'г' : True, 'б' : True, 'д': True, 'е' : True, 'к' : True, 'л' : False})  
-    cb2 = Cube(2, {'г' : False, 'л' : True, 'й' : True, 'о' : True, 'м' : True, 'щ' : True})  
-    cb3 = Cube(3, {'с' : True, 'р' : True, 'у' : True, 'т' : True, 'х' : True, 'ф' : True}) 
-    cb4 = Cube(4, {'к' : False, 'т' : False, 'ш' : True, 'ы' : True, 'ъ' : True, 'э' : True})
-    cb5 = Cube(5, {'ё' : True, 'в' : True, 'ж' : True, 'з' : True, 'п' : True, 'ч' : True})
-    cb6 = Cube(6, {'а' : False, 'е' : False, 'и' : True, 'ц' : True, 'я' : True, 'ю' : True})  
-    cb7 = Cube(7, {'а' : True, 'и' : False, 'о' : False, 'м' : False, 'н' : False, 'ь' : True})
-    cb8 = Cube(8, {'о' : False, 'н' : True, 'р' : False, 'у' : False, 'х' : False, 'ф' : False})
+    cb1 = Cube(1, {'в' : False, 'г' : True,  'а' : False, 'к' : True,  'п' : True,  'т' : False,})
+    cb2 = Cube(2, {'к' : False, 'й' : True,  'м' : True,  'ц' : True,  'щ' : True,  'ь' : True,})
+    cb3 = Cube(3, {'л' : False, 'н' : True,  'р' : True,  'т' : True,  'х' : True,  'ф' : True,})
+    cb4 = Cube(4, {'е' : True,  'и' : False, 'о' : True,  'ф' : False, 'ы' : True,  'ъ' : True,}) 
+    cb5 = Cube(5, {'в' : True,  'б' : True,  'з' : True,  'п' : False, 'н' : False, 'с' : False,}) 
+    cb6 = Cube(6, {'ё' : True,  'а' : True,  'и' : True,  'о' : False, 'у' : True,  'ю' : True,})
+    cb7 = Cube(7, {'а' : False, 'ж' : True,  'е' : False, 'о' : False, 'э' : True,  'я' : True,})  
+    cb8 = Cube(8, {'д' : True,  'л' : True,  'с' : True,  'р' : False, 'ч' : True,  'ш' : True,})
     '''
 
-
-    cb1 = Cube(1, {'в' : False, 'г' : True,  'а' : False, 'к' : True,  'п' : True,  'т' : False})  
-    cb2 = Cube(2, {'к' : False, 'й' : True,  'м' : True,  'ц' : True,  'щ' : True,  'ь' : True})  
-    cb3 = Cube(3, {'л' : False, 'н' : True,  'р' : True,  'т' : True,  'х' : True,  'ф' : True})  
-    cb4 = Cube(4, {'а' : True,  'и' : False, 'о' : True,  'ф' : False, 'ы' : True,  'ъ' : True})  
-    cb5 = Cube(5, {'в' : True,  'б' : True,  'з' : True,  'п' : False, 'н' : False, 'с' : False})  
-    cb6 = Cube(6, {'ё' : True,  'е' : True,  'и' : True,  'о' : False, 'у' : True,  'ю' : True})  
-    cb7 = Cube(7, {'а' : False, 'ж' : True,  'е' : False, 'о' : False, 'э' : True,  'я' : True})  
-    cb8 = Cube(8, {'д' : True,  'л' : True,  'с' : True,  'р' : False, 'ч' : True,  'ш' : True})
+    '''
+    cb1 = Cube(1, {'в' : False, 'г' : True, 'б' : True, 'п' : True, 'м' : True, 'т' : False,})  
+    cb2 = Cube(2, {'к' : False, 'л' : False, 'й' : True, 'ц' : True, 'щ' : True, 'ь' : True,})  
+    cb3 = Cube(3, {'з' : True, 'н' : True, 'р' : True, 'т' : True, 'х' : True, 'ш': True,})  
+    cb4 = Cube(4, {'а' : True, 'ж' : True, 'е' : False, 'о' : True, 'ъ' : True, 'я' : True,})  
+    cb5 = Cube(5, {'д' : True, 'к' : True, 'н' : False, 'с' : False, 'т' : False, 'ф' : True,})  
+    cb6 = Cube(6, {'ё' : True, 'е' : True, 'и' : True, 'о' : False, 'у' : True, 'ю' : True,})  
+    cb7 = Cube(7, {'а' : False, 'и' : False, 'о' : False, 'ф' : False, 'ы' : True, 'э' : True,})  
+    cb8 = Cube(8, {'в' : True, 'а' : False, 'л' : True, 'с' : True, 'р' : False, 'ч' : True,})
 
     '''
-    cb1 = Cube(1, {'д' : True, 'к' : True, 'л' : False, 'о' : True, 'у' : False, 'т' : False})  
-    cb2 = Cube(2, {'к' : False, 'й' : True, 'м' : True, 'ц' : True, 'щ' : True, 'ь' : True})  
-    cb3 = Cube(3, {'н' : True, 'р' : True, 'т' : True, 'ф' : True, 'ч' : True, 'ш' : True})  
-    cb4 = Cube(4, {'а' : False, 'е' : True, 'о' : False, 'ы' : True, 'ъ' : True, 'э' : True})  
-    cb5 = Cube(5, {'в' : True, 'г' : True, 'а' : True, 'н' : False, 'с' : False, 'х' : True})  
-    cb6 = Cube(6, {'а' : False, 'и' : True, 'п' : True, 'у' : True, 'ф' : False, 'ю' : True})  
-    cb7 = Cube(7, {'ё' : True, 'б' : True, 'е' : False, 'и' : False, 'о' : False, 'я' : True})  
-    cb8 = Cube(8, {'ж' : True, 'з' : True, 'л' : True, 'м' : False, 'с' : True, 'р' : False})
-    '''
+    cb1 = Cube(1, {'в' : False, 'г' : True, 'б' : True, 'п' : True, 'м' : True, 'т' : False,})  
+    cb2 = Cube(2, {'к' : False, 'й' : True, 'с' : False, 'ц' : True, 'щ' : True, 'ь' : True,})  
+    cb3 = Cube(3, {'з' : True, 'н' : True, 'р' : True, 'т' : True, 'х' : True, 'ш' : True,})  
+    cb4 = Cube(4, {'а' : True, 'ж' : True, 'е' : False, 'о' : True, 'ъ' : True, 'я' : True,})  
+    cb5 = Cube(5, {'д' : True, 'к' : True, 'л' : False, 'н' : False, 'т' : False, 'ф' : True,})  
+    cb6 = Cube(6, {'ё' : True, 'е' : True, 'и' : True, 'о' : False, 'у' : True, 'ю' : True,})  
+    cb7 = Cube(7, {'а' : False, 'и' : False, 'о' : False, 'ф' : False, 'ы' : True, 'э' : True,})  
+    cb8 = Cube(8, {'в' : True, 'а' : False, 'л' : True, 'с' : True, 'р' : False, 'ч' : True,})
 
     '''
     'а' 'б' 'в' 'г' 'д' 'е' 'ё' 'ж' 'з' 'и' 'й' 'к' 'л' 'м' 
@@ -114,15 +113,15 @@ def main():
         if job_portion :
             for iq in in_qs :
                 if (len(combs) - job_index) >= job_portion :
-                    iq.put(job_message('jobjob', max, combs[job_index:(job_index+job_portion)]))
+                    iq.put(job_message('jobjob', max, copy.deepcopy(combs[job_index:(job_index+job_portion)])))
                     print job_index , ' : ', job_index+job_portion
                     job_index += job_portion + 1
                 else :
-                    iq.put(job_message('jobjob', max, combs[(job_index):]))
+                    iq.put(job_message('jobjob', max, copy.deepcopy(combs[(job_index):])))
                     print (job_index), ':'
                 counter_of_tasks += 1
         else :
-            in_qs[0].put(job_message('jobjob', max, combs))
+            in_qs[0].put(job_message('jobjob', max, copy.deepcopy(combs)))
             counter_of_tasks += 1
 
         print 'counter_of_tasks : ', counter_of_tasks
@@ -161,6 +160,8 @@ def main():
         if counter_of_tasks == no_sesso :
             print 'This approach expired all found combinations, buy'
             print 'counter_of_tasks : ', counter_of_tasks, ' no sesso : ', no_sesso
+            for iq in in_qs :
+                iq.put(job_message('finito', None, None))
             break
 
 if __name__ == "__main__":

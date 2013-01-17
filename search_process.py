@@ -55,6 +55,7 @@ class Free_Cubes(object):
 
     def get_back(self, rcubes):
         self.cubes.extend(rcubes)
+        self.cubes = sorted(self.cubes, cmp=numeric_cubes_compare)
 
     def replace_not_base(self, letter_missing) :
         for cube in self.cubes:
@@ -247,8 +248,8 @@ def collect_words(comb, file_lines):
     found_words = 0
     combs = []
     combs_string = []
-    f = open('check_cubes\\' + comb.self_simple_string_presentation('file name comb') + '.txt', 'a')
-    f.write(comb.self_string_presentation('file name comb') + '\n')
+    #f = open('check_cubes\\' + comb.self_simple_string_presentation('file name comb') + '.txt', 'a')
+    #f.write(comb.self_string_presentation('file name comb') + '\n')
     for line in file_lines:
         zztop, alt_comb = collect_word2(line.rstrip(), comb)
         if alt_comb :
@@ -256,13 +257,13 @@ def collect_words(comb, file_lines):
             if asp not in combs_string :
                 combs.append(alt_comb)
                 combs_string.append(asp)
-                f.write(alt_comb.self_string_presentation('file alt comb') + '\n')
+                #f.write(alt_comb.self_string_presentation('file alt comb') + '\n')
         else:
             if zztop :
                 found_words += 1
-                f.write(line.rstrip() + '\n')
-    f.write(str(found_words))
-    f.close()
+                #f.write(line.rstrip() + '\n')
+    #f.write(str(found_words))
+    #f.close()
     return found_words, combs
 
 def loop_dict2(file_name, s_ind, in_q, out_q, mutex):
@@ -305,7 +306,8 @@ def loop_dict2(file_name, s_ind, in_q, out_q, mutex):
 
                 if not found and not break_s:
                     out_q.put(job_message('NO_SESSO', None, None))
-            
+            if jm.status == 'finito' :
+                break
         except Queue.Empty:
             pass
 
