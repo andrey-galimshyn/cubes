@@ -1,4 +1,4 @@
-import copy
+﻿import copy
 from datetime import datetime
 import os
 import multiprocessing
@@ -163,7 +163,7 @@ def combinazione_healthe(comb, place_descr) :
         if len(cc.letters) != 6 :
             raise Exception("wrong number of letters! after : ", place_descr)
 
-def collect_word2(word, free_cubes) :
+def collect_word2(word, free_cubes, check_file) :
     if len(word) == 0:
         return None
     combinazione = []
@@ -240,6 +240,15 @@ def collect_word2(word, free_cubes) :
 
         word_index += 1
 
+    if len(combinazione) == len(word) :
+        check_file.write(word.encode('utf-8') + '\n')
+        ordered_letters = ''
+        for ordered_cube in combinazione :
+            ordered_letters = str(ordered_cube.id) + '. ' + ordered_cube.selected_letter + ' | '
+            for key, val in ordered_cube.letters.iteritems() :
+                ordered_letters += key + ' : ' + str(val) + ', '
+            check_file.write(ordered_letters + '\n')
+        check_file.write('------------------------- \n')
     free_cubes.get_back(combinazione)
     if len(combinazione) == len(word) :
         return word, None
@@ -248,10 +257,10 @@ def collect_words(comb, file_lines):
     found_words = 0
     combs = []
     combs_string = []
-    #f = open('check_cubes\\' + comb.self_simple_string_presentation('file name comb') + '.txt', 'a')
-    #f.write(comb.self_string_presentation('file name comb') + '\n')
+    f = open('check_cubes\\' + comb.self_simple_string_presentation('file name comb') + '.txt', 'w')
+    f.write(comb.self_string_presentation('file name comb') + '\n')
     for line in file_lines:
-        zztop, alt_comb = collect_word2(line.rstrip(), comb)
+        zztop, alt_comb = collect_word2(line.rstrip(), comb, f)
         if alt_comb :
             asp = alt_comb.self_simple_string_presentation(comb.self_simple_string_presentation('father comb'))
             if asp not in combs_string :
@@ -263,7 +272,7 @@ def collect_words(comb, file_lines):
                 found_words += 1
                 #f.write(line.rstrip() + '\n')
     #f.write(str(found_words))
-    #f.close()
+    f.close()
     return found_words, combs
 
 def loop_dict2(file_name, s_ind, in_q, out_q, mutex):

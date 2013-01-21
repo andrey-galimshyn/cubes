@@ -2,7 +2,7 @@
 import re
 import copy
 
-lines_dyn = [line.decode('utf8').strip() for line in open('processed_man.txt')]
+lines_dyn = [line.decode('utf8').strip() for line in open('processed_m_m.txt')]
 parolas = []
 
 sort_map = {'а':'A', 'б':'B', 'в':'C', 'г':'D', 'д':'E', 'е':'F', 'ё':'G', 'ж':'H', 'з':'I', 'и':'J', 'й':'K', 'к':'L', 'л':'M', 'м':'N', 
