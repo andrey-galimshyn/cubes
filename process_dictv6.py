@@ -164,6 +164,7 @@ def main():
             for iq in in_qs :
                 iq.put(job_message('finito', None, None))
             break
+    print 'Astala vista!'
 
 if __name__ == "__main__":
     main()

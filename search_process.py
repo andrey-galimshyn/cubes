@@ -240,15 +240,21 @@ def collect_word2(word, free_cubes, check_file) :
 
         word_index += 1
 
+    '''
     if len(combinazione) == len(word) :
         check_file.write(word.encode('utf-8') + '\n')
         ordered_letters = ''
-        for ordered_cube in combinazione :
-            ordered_letters = str(ordered_cube.id) + '. ' + ordered_cube.selected_letter + ' | '
-            for key, val in ordered_cube.letters.iteritems() :
-                ordered_letters += key + ' : ' + str(val) + ', '
-            check_file.write(ordered_letters + '\n')
+        combinazione_candidate = copy.deepcopy(combinazione)
+        for letter in word :
+            for ordered_cube in combinazione_candidate :
+                if letter.encode('utf-8') == ordered_cube.selected_letter :
+                    ordered_letters += str(ordered_cube.id) + ' '
+                    combinazione_candidate.remove(ordered_cube)
+                    break
+        check_file.write(ordered_letters + '\n')
         check_file.write('------------------------- \n')
+    '''
+
     free_cubes.get_back(combinazione)
     if len(combinazione) == len(word) :
         return word, None
